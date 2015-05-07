@@ -9,6 +9,13 @@ Rails.application.routes.draw do
   # the endpoint for root is '/'
   root 'static_pages#index'
 
+  get '/michael' => 'static_pages#michael'
+
+  # can use :except too
+  resources :posts, :only => [:create, :show, :index, :destroy, :update]
+
+  resources :comments, :only => [:create, :show, :index, :destroy, :update]
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

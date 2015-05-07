@@ -1,0 +1,35 @@
+<h1>List All comments</h1>
+
+
+
+<h1>
+	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Content</th>
+				<th>Tags</th>
+				<th>Post ID</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @comments.each do |comment| %>
+				<tr>
+					<td>
+						<%= comment.id %>
+					</td>
+					<td>
+						<%= comment.content %>
+					</td>
+					<td>
+						<%= comment.post_id %>
+					</td>
+					<td>
+						<%= comment.tags %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</h1>
