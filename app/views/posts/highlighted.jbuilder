@@ -5,4 +5,3 @@ json.array! @posts do |post|
 	json.category post.category
 	json.hightlighted post.highlighted
 end
-
