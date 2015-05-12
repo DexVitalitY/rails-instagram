@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :authenticate_user!
 	#List out all posts
 	def index
 		@posts = Post.all
